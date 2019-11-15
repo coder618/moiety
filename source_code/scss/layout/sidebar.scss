@@ -1,0 +1,12 @@
+.sidebar-col {
+    &.right-sidebar-col {
+        margin-left: auto;
+    }
+    &.left-sidebar-col {
+        margin-right: auto;
+    }
+
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+}

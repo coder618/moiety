@@ -1,0 +1,53 @@
+.banner {
+	background-color: $secondary;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	min-height: 15vw;
+	// margin: 50px 0 50px 0;
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	color: #fff;
+	border-radius: 10px;
+	.taxonomy-description {
+		padding-top: 15px;
+		p {
+			margin: 0;
+		}
+	}
+
+	h1 {
+		position: relative;
+		margin: 0;
+		@include br-text(50, 60);
+	}
+
+	@include media-breakpoint-down(sm) {
+		margin: 0 -15px 40px -15px;
+		border-radius: 0;
+		padding: 50px 15px;
+
+		h1 {
+			@include br-text(28, 30);
+		}
+	}
+}
+
+/* PAGE BANNER */
+.banner-inner {
+	position: relative;
+	&:before {
+		position: absolute;
+		content: " ";
+		width: 100%;
+		left: 0;
+		right: 0;
+		height: 100%;
+		background-color: $secondary;
+		opacity: 0.3;
+	}
+}

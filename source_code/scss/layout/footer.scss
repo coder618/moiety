@@ -1,0 +1,16 @@
+.copyright {
+    // margin-top: 60px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 2px solid $gray;
+    color: #a4a8b0;
+    p {
+        margin-bottom: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}

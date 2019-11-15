@@ -1,0 +1,131 @@
+.comments-wrapper {
+    padding-top: 40px;
+    .comments-title {
+        margin: 0;
+        padding-bottom: 30px;
+    }
+}
+
+.comments-title {
+    @include br-text();
+}
+// All comment will stay here
+.comment-list {
+    padding-left: 0;
+    list-style: none;
+    > li {
+        padding-bottom: 30px;
+    }
+
+    .children {
+        padding: 20px 0 0 50px;
+    }
+    ul {
+        list-style: none;
+    }
+
+    @include media-breakpoint-down(sm) {
+        .children {
+            padding: 0px 0 0 10px;
+        }
+    }
+}
+textarea#comment {
+    height: 150px;
+}
+
+// Single comment card
+.comment-body {
+    position: relative;
+    .says {
+        display: none;
+    }
+    .reply {
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include br-text(14, 16);
+        text-transform: uppercase;
+        a {
+            color: #ccc;
+            font-weight: 500;
+        }
+    }
+    .comment-content {
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+    time {
+        @include br-text(13, 16);
+        color: #ccc;
+    }
+    @include media-breakpoint-up(sm) {
+        img {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            border-radius: 5%;
+        }
+        .comment-edit-link,
+        time {
+            @include br-text(13, 16);
+            color: #ccc;
+        }
+        .comment-edit-link {
+            padding-left: 20px;
+        }
+        .comment-metadata {
+            position: absolute;
+            top: 25px;
+            left: 100px;
+        }
+        .comment-author {
+            display: flex;
+            align-items: flex-start;
+            b {
+                // position: relative;
+                // top: -10px;
+            }
+        }
+        p {
+            margin-bottom: 0;
+        }
+
+        .comment-content {
+            padding: 0px 10px 0 100px;
+            position: relative;
+            top: -30px;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 20px;
+        .comment-metadata {
+            font-size: 12px;
+            position: absolute;
+            left: 60px;
+            top: 25px;
+            // position: relative;
+        }
+        .comment-metadata {
+        }
+        .fn {
+            position: relative;
+            top: -10px;
+        }
+        .comment-content {
+            top: unset;
+            padding: 15px 0 0 0;
+        }
+        img {
+            width: 40px;
+            height: 40px;
+            margin-right: 17px;
+        }
+    }
+}
+
+.comment-form {
+    max-width: 750px;
+}

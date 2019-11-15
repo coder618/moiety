@@ -1,0 +1,88 @@
+/* Advanced Font Styling
+  Author: github.com/coder618
+*/
+@mixin br-text(
+    $size: null,
+    $line-h: null,
+    $weight: null,
+    $c: null,
+    $m: null,
+    $p: null,
+    $f-name: null,
+    $m-b: null,
+    $p-b: null
+) {
+    @if ($f-name) {
+        font-family: $f-name;
+    }
+    @if ($size) {
+        $_size: quote($size/16 rem);
+        font-size: unquote(str-remove-whitespace($_size));
+    }
+    @if ($line-h) {
+        $line-h: quote($line-h/$size em);
+        line-height: unquote(str-remove-whitespace($line-h));
+    }
+    @if ($weight) {
+        font-weight: $weight;
+    }
+    @if ($c) {
+        color: $c;
+    }
+    @if ($m) {
+        margin: $m;
+    }
+
+    @if ($m-b) {
+        $m-b: quote($m-b/$size em);
+        margin-bottom: unquote(str-remove-whitespace($m-b));
+    }
+    @if ($p-b) {
+        $p-b: quote($p-b/$size em);
+        padding-bottom: unquote(str-remove-whitespace($p-b));
+    }
+    @if ($p) {
+        padding: $p;
+    }
+}
+
+@mixin br-sudo(
+    $width: null,
+    $height: null,
+    $t: null,
+    $l: null,
+    $b: null,
+    $r: null,
+    $z: null
+) {
+    content: " ";
+    position: absolute;
+    @if ($w) {
+        width: $w;
+    }
+    @if ($h) {
+        height: $h;
+    }
+    @if ($z) {
+        z-index: $z;
+    }
+    @if ($t) {
+        top: $t;
+    }
+    @if ($b) {
+        bottom: $b;
+    }
+    @if ($l) {
+        left: $l;
+    }
+    @if ($r) {
+        right: $r;
+    }
+}
+@function str-remove-whitespace($str) {
+    @while (str-index($str, " ") != null) {
+        $index: str-index($str, " ");
+        $str: "#{str-slice($str, 0, $index - 1)}#{str-slice($str, $index + 1)}";
+    }
+    @return $str;
+}

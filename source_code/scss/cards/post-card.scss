@@ -1,0 +1,135 @@
+.post-card {
+    .img-section {
+        // padding-bottom: 60%;
+        min-height: 18vw;
+
+        margin-bottom: 40px;
+        border-radius: 5px;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .title {
+        @include br-text(24, 30, 500, $m-b: 20);
+        // margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .meta-section {
+        padding-bottom: 30px;
+        padding: 0 20px 30px 0;
+        color: #a4a8b0;
+        display: flex;
+        justify-content: space-between;
+
+        @include br-text(14, 20, 500);
+    }
+
+    .detail {
+        @include br-text(17, 26, $c: #646d7c);
+        padding-bottom: 20px;
+    }
+
+    a {
+    }
+
+    .read-more-link {
+        @include br-text(20, 26, 700);
+        padding-right: 40px;
+        position: relative;
+
+        svg {
+            transition: all 0.35s ease;
+            width: 15px;
+            position: absolute;
+            right: 20px;
+
+            path {
+                fill: $primary;
+            }
+        }
+
+        &:hover {
+            svg {
+                transform: translateX(10px);
+            }
+        }
+    }
+
+    .tags b {
+        padding: 0 !important;
+    }
+
+    .tags,
+    .tags b {
+        display: block;
+        padding: 25px 20px 15px 20px;
+        // position: absolute;
+        width: 100%;
+
+        // right: 15px;
+        // top: 15px;
+        a {
+            display: inline-block;
+            float: right;
+            border-radius: 20px;
+            background-color: $secondary;
+            color: #fff;
+            display: inline-block;
+            padding: 5px 12px;
+            transition: all 0.3s;
+
+            margin: 0 0 8px 8px;
+            padding: 5px 12px;
+            transition: all 0.3s;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                background-color: $primary;
+                text-decoration: none;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .cats {
+        display: flex;
+        justify-content: space-between;
+        a {
+            margin-right: 15px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .tags {
+            top: 15px;
+            right: 15px;
+            a {
+                font-size: 13px;
+            }
+        }
+
+        .img-section {
+            margin-bottom: 25px;
+        }
+        .meta-section {
+            padding-bottom: 25px;
+        }
+        .detail {
+            font-size: 15px;
+        }
+        .read-more-link {
+            font-size: 20px;
+        }
+    }
+}

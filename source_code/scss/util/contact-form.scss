@@ -1,0 +1,108 @@
+// keep a max width in case it is just the form and nothing else
+// we do not want a form spanning whole page
+.wpcf7 {
+    max-width: 600px;
+    margin: 0 auto !important;
+
+    // all inputs except radios and checkboxes inherit from form-control
+    input[type="text"],
+    input[type="search"],
+    input[type="url"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="range"],
+    input[type="date"],
+    input[type="month"],
+    input[type="week"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="color"],
+    input[type="email"],
+    input[type="file"],
+    input[type="submit"],
+    select,
+    textarea {
+        @extend .form-control;
+    }
+
+    // submit button, inherit .btn and .btn-outline-primary classes.
+    input[type="submit"] {
+        @extend .btn;
+        @extend .btn-primary;
+        height: unset;
+        border-radius: 5px !important;
+        border-color: $primary !important;
+        overflow: hidden;
+    }
+
+    .wpcf7-form {
+        // set paragraphs to behave like divs with class .form-group
+        p {
+            @extend .form-group;
+        }
+        > p {
+            margin: 0 0 20px 0;
+            &:last-of-type {
+                margin: 0 !important;
+            }
+        }
+
+        // let labels be 100%
+        label {
+            width: 100%;
+        }
+
+        input.wpcf7-not-valid,
+        textarea.wpcf7-not-valid {
+            border-color: theme-color("danger");
+        }
+    }
+
+    // not valid tip for each control
+    .wpcf7-not-valid-tip {
+        color: theme-color("danger");
+        display: block;
+        margin-top: 8px;
+    }
+
+    // validation errors ourput bottom of form
+    .wpcf7-validation-errors {
+        @extend .form-control;
+        color: theme-color("danger");
+        border: 1px solid $gray-200;
+        height: unset;
+        margin: 0 !important;
+    }
+
+    label {
+        color: #616161;
+        font-size: 15px;
+        margin: 0;
+        input,
+        textarea {
+            margin-top: 10px;
+        }
+    }
+}
+
+.form-control {
+    border: 2px solid #edf0f5;
+    border-radius: 3px;
+    padding: 0 20px;
+    line-height: 45px;
+    &:focus {
+        border-color: #a4a8b0;
+        box-shadow: none;
+        outline: 0;
+    }
+}
+
+textarea.form-control {
+    line-height: 1.5;
+    padding: 20px;
+}
+
+.wpcf7-submit {
+    @extend .btn-primary;
+}

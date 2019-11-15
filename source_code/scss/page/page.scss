@@ -1,0 +1,15 @@
+/*
+    generic page styling will go here
+*/
+#page {
+	padding-top: 50px;
+	@include media-breakpoint-down(sm) {
+		padding-top: 30px;
+	}
+}
+
+.page-with-no-banner {
+	.page-title {
+		margin-bottom: 30px;
+	}
+}

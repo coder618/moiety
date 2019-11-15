@@ -1,0 +1,104 @@
+/*
+This file will contain generic typo and other  style for blog and page
+*/
+
+.generic-style {
+
+    p>a:not(.no-understyle),
+    >a:not(.no-understyle) {
+        background-image: linear-gradient(transparent, transparent),
+            linear-gradient(transparent, transparent),
+            linear-gradient(to right, $primary, $secondary);
+        background-repeat: no-repeat;
+        background-position: 120%, 122%, 0 130%;
+        background-size: 100% 7px;
+        transition: all 0.3s ease;
+        @include br-text(16);
+
+        &:hover {
+            background-color: $primary;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    p {
+        @include br-text(16, 35, 400);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        margin-bottom: 20px;
+    }
+}
+
+.wp-block-quote {
+    padding-left: 20px;
+    border-left: 5px solid $secondary;
+    margin: 40px 0;
+
+    p {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 2.5;
+    }
+
+    @include media-breakpoint-down(sm) {
+        margin: 30px 0;
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+    }
+}
+
+.wp-caption {
+    margin-bottom: 1.5em;
+    max-width: 100%;
+
+    img[class*="wp-image-"] {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.screen-reader-text {
+    display: none;
+}
+
+.bypostauthor {
+    display: block;
+}
+
+.gallery-caption {
+    display: block;
+}
+
+.wp-caption-text {
+    text-align: center;
+    margin: 0;
+    padding: 15px 0;
+    background-color: #f1f2f4;
+}
+
+.alignleft {
+    display: inline;
+    margin-right: 1.5em;
+}
+
+.alignright {
+    display: block;
+    float: right;
+    margin-left: 1.5em;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

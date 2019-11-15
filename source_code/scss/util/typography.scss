@@ -1,0 +1,39 @@
+h2 {
+    @include br-text();
+}
+
+h1 {
+    @include br-text(36, 48, 700);
+
+    @include media-breakpoint-down(sm) {
+        @include br-text(26, 30);
+    }
+}
+
+h2 {
+    @include br-text(30, 40, 700);
+    @include media-breakpoint-down(sm) {
+        @include br-text(22, 30);
+    }
+}
+
+h3 {
+    @include br-text(26, 35);
+    @include media-breakpoint-down(sm) {
+        @include br-text(20, 25);
+    }
+}
+
+h4 {
+    @include br-text(22, 30);
+    @include media-breakpoint-down(sm) {
+        @include br-text(18, 30);
+    }
+}
+
+h5 {
+    @include br-text(20, 30);
+    @include media-breakpoint-down(sm) {
+        @include br-text(18, 30);
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "browserSyncOptions": {
+        "proxy": "localhost:8080/",
+        "notify": false
+    },
+    "browserSyncWatchFiles": ["./css/*.min.css", "./js/*.min.js", "./**/*.php"],
+    "paths": {
+        "js": "./dist/js",
+        "css": "./dist/css",
+        "img": "./dist/img",
+        "imgsrc": "./source_code/img",
+        "sass": "./source_code/scss",
+        "node": "./node_modules/",
+        "bower": "./bower_components/",
+        "dev": "./source_code",
+        "dist": "./dist",
+        "distprod": "./dist-product",
+        "js_packages_list": [
+            "./node_modules/jquery/dist/jquery.js",
+            "./node_modules/bootstrap/dist/js/bootstrap.js",
+            "./node_modules/headroom.js/dist/headroom.js",
+            "./node_modules/flickity/dist/flickity.pkgd.js",
+            "./source_code/js/main-navigation.js",
+            "./source_code/js/related-post.js",
+            "./source_code/js/load-more.js",
+            "./source_code/js/custom.js"
+        ],
+
+        "vendor": ""
+    }
+}
