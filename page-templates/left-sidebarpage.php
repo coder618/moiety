@@ -30,7 +30,14 @@ get_header();
 			<?php while ( have_posts() ) : the_post(); ?>
 			<div class="col-md-8">
 				<div class="page-content generic-style">
-					<?php  the_content();  ?>		
+					<?php  the_content();  ?>	
+					<?php
+						wp_link_pages( array(
+							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'moiety' ),
+							'after'  => '</div>',
+						) );
+					?>	
+
 				</div>			
 			</div>
 			<?php endwhile; // end of the loop. ?>
