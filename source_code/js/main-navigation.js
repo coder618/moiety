@@ -1,6 +1,6 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
     /** NAV */
-    $(".main-nav-toggler").on("click", function() {
+    $(".main-nav-toggler").on("click", function () {
         // $(".main-nav-toggler").toggleClass("is-active");
         $("body").toggleClass("show-nav");
     });
@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
     // mobile dropdown toggle
     $(".main-navigation-menu.for-mobile a.dropdown-toggle").on(
         "click",
-        function(e) {
+        function (e) {
             e.preventDefault();
             $(this)
                 .parent("li")
