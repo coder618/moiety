@@ -24,8 +24,6 @@ defined( 'ABSPATH' ) || exit;
 <?php do_action( 'wp_body_open' ); ?>
 
 <div class="site" id="page">
-	<?php 	
-		get_template_part("layout/main-navigation");
-	?>
+	<?php 	get_template_part("layout/main-navigation"); ?>
 
 

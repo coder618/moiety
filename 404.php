@@ -7,10 +7,7 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-
 get_header();
-
-$container = get_theme_mod( 'moiety_container_type' );
 ?>
 
 <div class="wrapper">

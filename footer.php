@@ -9,9 +9,6 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-
-$theme_settings = get_option( 'user_theme_settings' );
-
 ?>
 
     <div class="container">
