@@ -19,7 +19,7 @@
             "./node_modules/jquery/dist/jquery.js",
             "./node_modules/bootstrap/dist/js/bootstrap.js",
             "./node_modules/headroom.js/dist/headroom.js",
-            "./node_modules/flickity/dist/flickity.pkgd.js",
+            "./source_code/js/vendor/flickity.js",
             "./source_code/js/main-navigation.js",
             "./source_code/js/related-post.js",
             "./source_code/js/load-more.js",
